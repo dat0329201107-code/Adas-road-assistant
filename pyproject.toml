@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adas-road-assistant"
+version = "0.1.0"
+description = "Prototype ADAS demo for road-scene classification and speed-limit alerts"
+readme = "README_vi.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "ADAS Team"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+
+dependencies = [
+    "opencv-python>=4.9,<5.0",
+    "numpy>=1.26,<3.0",
+    "Pillow>=10.0,<13.0",
+    "PyYAML>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+ai = [
+    "torch>=2.2,<3.0",
+    "transformers>=4.40,<5.0",
+]
+ocr = [
+    "pytesseract>=0.3.10,<0.4",
+]
+yolo = [
+    "ultralytics>=8.3.78",
+]
+gps = [
+    "pyserial>=3.5,<4.0",
+]
+obd = [
+    "obd>=0.7,<1.0",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+all = [
+    "adas-road-assistant[ai,ocr,yolo,gps,obd,dev]",
+]
+
+[project.scripts]
+adas-road-assistant = "adas.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
