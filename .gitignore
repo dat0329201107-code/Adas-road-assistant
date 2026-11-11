@@ -61,12 +61,18 @@ Thumbs.db
 *.swp
 *.swo
 
-# Large raw video dumps (keep structured sample frames)
-*.mp4
+# Outputs / Logs
+outputs/
+*.log
+
+# Large raw video dumps (allow 5 standard demo videos for live demonstration)
 *.avi
 *.mkv
 *.mov
-!data/samples/*.mp4
+*.part
+raw_downloads/
+*.mp4
+!data/videos/demo_*.mp4
 
 # IDE files
 .vscode/

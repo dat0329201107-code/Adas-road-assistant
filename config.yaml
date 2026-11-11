@@ -1,0 +1,61 @@
+# ADAS Road Assistant - Configuration
+# Copy this file and customize for your setup
+
+camera:
+  source: 0              # Webcam index or video file path
+  width: 1280
+  height: 720
+
+road_classification:
+  enabled: true
+  model_name: "openai/clip-vit-base-patch32"
+  every_n_frames: 20     # Run CLIP every N frames
+
+sign_detection:
+  enabled: true
+  every_n_frames: 5
+  enable_ocr: true
+  tesseract_cmd: null    # Full path to tesseract.exe if not on PATH
+  # Model-based detector (YOLO26 on 82 Vietnam classes)
+  use_yolo: true
+  yolo_model_path: "models/traffic_signs_yolo26n.pt"
+  yolo_confidence: 0.3
+
+lane_detection:
+  enabled: true
+  roi_top_ratio: 0.55
+
+object_detection:
+  enabled: false
+  model_path: null       # null = use default yolo26n.pt
+  confidence: 0.35
+  target_classes:
+    - car
+    - truck
+    - bus
+    - motorcycle
+    - person
+
+speed:
+  source: "simulated"    # simulated | gps | obd
+  initial_demo_speed: null
+  manual_limit: null     # Fallback limit in km/h (5-130)
+  overspeed_buffer: 0.0
+  gps_port: "COM3"
+  gps_baudrate: 9600
+  obd_port: null
+
+alerts:
+  enable_sound: true
+  sound_repeat_seconds: 3.0
+  confirm_seconds: 0.5
+  sign_ttl_seconds: 45.0
+  caution_margin: 5.0          # Ngưỡng cảnh báo "Chú ý" (km/h dưới giới hạn)
+  min_confidence: 0.60         # Độ tin cậy tối thiểu để thoát trạng thái "Đang xác định"
+  min_warmup_frames: 5         # Số khung hình tích luỹ trước khi cảnh báo
+
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_dir: "outputs/logs"
+  log_frame_stats_every: 100  # Log frame stats every N frames
