@@ -1,0 +1,122 @@
+{
+  "legal_framework": "Thông tư 31/2019/TT-BGTVT ngày 29/08/2019 của Bộ Giao thông Vận tải quy định về tốc độ và khoảng cách an toàn của xe cơ giới, xe máy chuyên dùng tham gia giao thông đường bộ.",
+  "version": "1.0.0",
+  "road_classes": {
+    "cao_toc": {
+      "class_id": 0,
+      "class_key": "cao_toc",
+      "name_vi": "Cao tốc",
+      "name_en": "Expressway / Highway",
+      "legal_max_speed": 100,
+      "max_allowed_speed": 120,
+      "min_allowed_speed": 60,
+      "default_caution_margin": 10,
+      "description": "Đường nhiều làn xe cơ giới (3-4 làn), có dải phân cách cứng bê tông ở giữa, xe chạy nhanh và liên tục, không có giao cắt đồng mức.",
+      "rule_detail": "Tốc độ tối đa tuân theo biển báo cao tốc, thông thường từ 100 km/h đến 120 km/h, tốc độ tối thiểu 60 km/h.",
+      "vehicle_limits": {
+        "car": 120,
+        "motorcycle": 0,
+        "truck": 100,
+        "bus": 100
+      }
+    },
+    "duong_doi_do_thi": {
+      "class_id": 1,
+      "class_key": "duong_doi_do_thi",
+      "name_vi": "Đường đôi đô thị",
+      "name_en": "Urban Dual Carriageway with Median",
+      "legal_max_speed": 60,
+      "max_allowed_speed": 60,
+      "min_allowed_speed": null,
+      "default_caution_margin": 5,
+      "description": "Đường trong khu vực đông dân cư có dải phân cách giữa (dải phân cách cứng hoặc dải phân cách bồn cây trồng hoa), 2 chiều xe chạy riêng biệt.",
+      "rule_detail": "Đường đôi trong khu đông dân cư: tốc độ tối đa cho phép là 60 km/h đối với ô tô con, xe máy.",
+      "vehicle_limits": {
+        "car": 60,
+        "motorcycle": 60,
+        "truck": 60,
+        "bus": 60
+      }
+    },
+    "pho_hai_chieu": {
+      "class_id": 2,
+      "class_key": "pho_hai_chieu",
+      "name_vi": "Phố hai chiều",
+      "name_en": "Urban Two-Way Street without Median",
+      "legal_max_speed": 50,
+      "max_allowed_speed": 50,
+      "min_allowed_speed": null,
+      "default_caution_margin": 5,
+      "description": "Đường phố nội thành đông dân cư không có dải phân cách giữa, xe hai chiều lưu thông chung một mặt đường hoặc đường một chiều có 1 làn xe cơ giới.",
+      "rule_detail": "Đường hai chiều trong khu đông dân cư không có dải phân cách: tốc độ tối đa cho phép là 50 km/h.",
+      "vehicle_limits": {
+        "car": 50,
+        "motorcycle": 50,
+        "truck": 50,
+        "bus": 50
+      }
+    },
+    "ngoai_khu_dan_cu": {
+      "class_id": 3,
+      "class_key": "ngoai_khu_dan_cu",
+      "name_vi": "Ngoài khu dân cư",
+      "name_en": "Rural / Regional Highway",
+      "legal_max_speed": 80,
+      "max_allowed_speed": 90,
+      "min_allowed_speed": null,
+      "default_caution_margin": 8,
+      "description": "Đường nằm ngoài khu vực đông dân cư (Quốc lộ, đường liên tỉnh) chạy qua đồng ruộng, rừng núi, nhà dân thưa thớt.",
+      "rule_detail": "Ngoài khu đông dân cư: 80 km/h (với đường 2 chiều không có dải phân cách) hoặc 90 km/h (với đường đôi có dải phân cách giữa).",
+      "vehicle_limits": {
+        "car": 80,
+        "motorcycle": 70,
+        "truck": 70,
+        "bus": 70
+      }
+    },
+    "hem_ngo": {
+      "class_id": 4,
+      "class_key": "hem_ngo",
+      "name_vi": "Hẻm / ngõ",
+      "name_en": "Narrow Alley / Residential Lane",
+      "legal_max_speed": 30,
+      "max_allowed_speed": 30,
+      "min_allowed_speed": null,
+      "default_caution_margin": 3,
+      "description": "Ngõ, ngách, hẻm nhỏ hẹp trong khu dân cư xe máy, tường nhà sát mặt đường, tầm nhìn hạn chế, đông người đi bộ và trẻ em.",
+      "rule_detail": "Hẻm, ngõ nhỏ: khuyến nghị an toàn tối đa 30 km/h để tài xế kịp thời xử lý chướng ngại vật bất ngờ.",
+      "vehicle_limits": {
+        "car": 30,
+        "motorcycle": 30,
+        "truck": 20,
+        "bus": 20
+      }
+    }
+  },
+  "alert_levels": {
+    "idle": {
+      "code": "idle",
+      "label": "ĐANG XÁC ĐỊNH",
+      "color_hex": "#94A3B8",
+      "description": "Đang phân tích khung hình camera hoặc độ tin cậy thấp, chưa đủ điều kiện đưa ra cảnh báo."
+    },
+    "ok": {
+      "code": "ok",
+      "label": "AN TOÀN",
+      "color_hex": "#10B981",
+      "description": "Tốc độ xe nằm trong giới hạn an toàn cho phép của loại đường hiện tại."
+    },
+    "warn": {
+      "code": "warn",
+      "label": "CHÚ Ý",
+      "color_hex": "#F59E0B",
+      "description": "Tốc độ xe gần chạm giới hạn cho phép; nhắc nhở tài xế nhả ga nhẹ."
+    },
+    "bad": {
+      "code": "bad",
+      "label": "VƯỢT TỐC",
+      "color_hex": "#EF4444",
+      "description": "Tốc độ xe vượt quá giới hạn tối đa cho phép; cảnh báo khẩn cấp giảm tốc ngay."
+    }
+  }
+}

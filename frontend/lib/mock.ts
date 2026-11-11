@@ -1,0 +1,85 @@
+/**
+ * Fallback Mock Data matching VisionDrive AI Dashboard specification.
+ */
+import { DemoScenario } from './types';
+
+export const MOCK_DEMO_SCENARIOS: DemoScenario[] = [
+  {
+    chip: 'Cao tốc',
+    cls: 0,
+    road_type: 'cao_toc',
+    name_vi: 'Cao tốc',
+    limit: 100,
+    max_limit: 120,
+    main: 93,
+    probs: [93, 3, 1, 3, 0],
+    rule: 'Cao tốc: giới hạn theo biển báo cao tốc, tối đa 100 - 120 km/h.',
+    speeds: [88, 98, 106, 112, 117, 121, 126, 119, 111, 104],
+    boxes: [
+      { x: 360, y: 232, w: 58, h: 42, label: 'ô tô 96%' },
+      { x: 474, y: 206, w: 32, h: 24, label: 'xe tải 88%' },
+    ],
+  },
+  {
+    chip: 'Đô thị đôi',
+    cls: 1,
+    road_type: 'duong_doi_do_thi',
+    name_vi: 'Đường đôi đô thị',
+    limit: 60,
+    max_limit: 60,
+    main: 91,
+    probs: [2, 91, 5, 1, 1],
+    rule: 'Khu đông dân cư, đường đôi có dải phân cách: tối đa 60 km/h.',
+    speeds: [52, 50, 54, 57, 59, 63, 67, 61, 55, 52],
+    boxes: [
+      { x: 322, y: 240, w: 62, h: 44, label: 'ô tô 94%' },
+      { x: 478, y: 252, w: 34, h: 46, label: 'xe máy 89%' },
+      { x: 438, y: 208, w: 26, h: 22, label: 'ô tô 81%' },
+    ],
+  },
+  {
+    chip: 'Phố 2 chiều',
+    cls: 2,
+    road_type: 'pho_hai_chieu',
+    name_vi: 'Phố hai chiều',
+    limit: 50,
+    max_limit: 50,
+    main: 92,
+    probs: [1, 4, 92, 2, 1],
+    rule: 'Đường phố 2 chiều không có dải phân cách giữa: tối đa 50 km/h.',
+    speeds: [36, 40, 44, 48, 52, 56, 50, 44, 40, 38],
+    boxes: [
+      { x: 340, y: 230, w: 55, h: 40, label: 'ô tô 93%' },
+      { x: 460, y: 245, w: 30, h: 42, label: 'xe máy 90%' },
+    ],
+  },
+  {
+    chip: 'Ngoài khu dân cư',
+    cls: 3,
+    road_type: 'ngoai_khu_dan_cu',
+    name_vi: 'Ngoài khu dân cư',
+    limit: 80,
+    max_limit: 90,
+    main: 89,
+    probs: [3, 1, 5, 89, 2],
+    rule: 'Ngoài khu đông dân cư: 80 km/h (đường 2 chiều) hoặc 90 km/h (đường đôi).',
+    speeds: [74, 80, 85, 89, 92, 95, 88, 84, 79, 76],
+    boxes: [{ x: 370, y: 216, w: 36, h: 28, label: 'ô tô 92%' }],
+  },
+  {
+    chip: 'Hẻm / ngõ',
+    cls: 4,
+    road_type: 'hem_ngo',
+    name_vi: 'Hẻm / ngõ',
+    limit: 30,
+    max_limit: 30,
+    main: 95,
+    probs: [0, 1, 2, 2, 95],
+    rule: 'Hẻm, ngõ: ngưỡng an toàn 30 km/h dùng cho demo và khu dân cư.',
+    speeds: [24, 26, 28, 30, 33, 31, 27, 25, 22, 20],
+    boxes: [
+      { x: 380, y: 262, w: 42, h: 60, label: 'xe máy 87%' },
+      { x: 306, y: 244, w: 22, h: 70, label: 'người 79%' },
+    ],
+  },
+];

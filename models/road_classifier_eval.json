@@ -1,0 +1,70 @@
+{
+  "best_val_accuracy_percent": 95.83,
+  "per_class_accuracy_percent": {
+    "cao_toc": 87.5,
+    "duong_doi_do_thi": 86.67,
+    "pho_hai_chieu": 100.0,
+    "ngoai_khu_dan_cu": 99.17,
+    "hem_ngo": 100.0
+  },
+  "total_train_samples": 2400,
+  "total_val_samples": 600,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.604,
+      "train_acc": 0.8454,
+      "val_loss": 0.6484,
+      "val_acc": 0.82
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.305,
+      "train_acc": 0.9625,
+      "val_loss": 0.4297,
+      "val_acc": 0.915
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2898,
+      "train_acc": 0.9679,
+      "val_loss": 0.3381,
+      "val_acc": 0.9533
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.2846,
+      "train_acc": 0.9688,
+      "val_loss": 0.3148,
+      "val_acc": 0.9517
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.2736,
+      "train_acc": 0.9779,
+      "val_loss": 0.3035,
+      "val_acc": 0.9483
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.2687,
+      "train_acc": 0.9779,
+      "val_loss": 0.3075,
+      "val_acc": 0.9583
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.2602,
+      "train_acc": 0.9838,
+      "val_loss": 0.3109,
+      "val_acc": 0.95
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.2563,
+      "train_acc": 0.985,
+      "val_loss": 0.3095,
+      "val_acc": 0.9467
+    }
+  ]
+}

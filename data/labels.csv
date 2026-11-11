@@ -1,0 +1,6 @@
+class_id,class_key,name_vi,name_en,legal_max_speed,default_caution_margin,description,legal_basis
+0,cao_toc,Cao tốc,Expressway,100,10,Đường nhiều làn xe cơ giới có dải phân cách cứng bê tông xe chạy nhanh liên tục,Thông tư 31/2019/TT-BGTVT
+1,duong_doi_do_thi,Đường đôi đô thị,Urban Dual Carriageway,60,5,Đường đô thị có dải phân cách giữa phân chia 2 chiều xe chạy riêng biệt,Thông tư 31/2019/TT-BGTVT
+2,pho_hai_chieu,Phố hai chiều,Urban Two-Way Street,50,5,Đường phố nội thành đông đúc không có dải phân cách giữa xe 2 chiều đi chung mặt đường,Thông tư 31/2019/TT-BGTVT
+3,ngoai_khu_dan_cu,Ngoài khu dân cư,Rural / Highway,80,8,Đường quốc lộ hoặc liên tỉnh ngoài khu đông dân cư hai bên đồng ruộng đồi núi,Thông tư 31/2019/TT-BGTVT
+4,hem_ngo,Hẻm / ngõ,Narrow Alley,30,3,Ngõ ngách hẹp trong khu dân cư xe máy tầm nhìn khuất đông người đi bộ,Khuyến nghị an toàn ADAS
